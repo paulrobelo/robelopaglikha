@@ -1,16 +1,5 @@
-/*
-    Killer Carousel 10 Site License (KC01-10).
-    Version 1.2 rev 1501161200
-    Please purchase an appropriate license to use this software.
-    License Agreement: www.starplugins.com/license
-    Copyright (c)2012-2015 Star Plugins - www.starplugins.com
-    
-    Downloaded on Jan 16, 2015 by account #1
-    License Key: e5720325dc35165467052c8a37798425
-    Licensed website(s): starplugins
-*/
 $(function() {
-    $('.kc-wrap').KillerCarousel({
+    $('.kc-wrap').slide({
         // Width of carousel.
         width: 800,
         // Item spacing in 3d (CSS3 3d) mode.
@@ -18,7 +7,7 @@ $(function() {
         // Item spacing in 2d (no CSS3 3d) mode. 
         spacing2d: 120,
         // Path to images for shadows etc.
-        imagePath: "/sites/starplugins/js/killercarousel/",
+        imagePath: "/sites/starplugins/js/slide/",
         showShadow: true,
         showReflection: true,
         // Looping mode.
@@ -28,7 +17,7 @@ $(function() {
 
     });
 
-    var kc = $('.kc-wrap').data('KillerCarousel');
+    var kc = $('.kc-wrap').data('slide');
     var dir = 0;
     setInterval(function() {
         kc.position(kc.position() + dir * 50);
