@@ -16,7 +16,7 @@
 	<nav id="navbar">
 		<a href="index.html"><img src="images\logo.png"></a>
 		<div class="nav-links" id="navlinks">
-			<i class="fa fa-times" onclick="hidemenu()"></i>
+		<i class="fa fa-times" onclick="hidemenu()"></i>
 			<ul id= "menu">
 				<li><a href="#home">Home</a></li>
 				<li><a href="#about">About</a></li>
@@ -360,7 +360,34 @@ As soon as you have the essential programming knowledge and skills, however, if 
 	</div>
 </section>
 
+<!----------JavaScript for Toggle Menu---------------->
+<script>
+	
+	var navLinks = document.getElementById("navlinks")
+	function showmenu(){
+		navlinks.style.right = "0";
 
+	}
+	function hidemenu(){
+		navlinks.style.right = "-300px";
+		
+	}
+</script>
+<!----------JavaScript for navbar---------------->
+<script>
+	
+	var navbar =document.getElementById("navbar");
+    var menu = document.getElementById("menu");
+
+    window.onscroll = function(){
+    	if(window.pageYOffset >= menu.offsetTop){
+    		navbar.classList.add("sticky")
+    	}
+    	else {
+    		navbar.classList.remove("sticky")
+    	}
+    }
+</script>
 
 
 <!----------JavaScript for slideshow---------------->	
@@ -387,34 +414,7 @@ function showSlides() {
 </script>	
 		
 
-<!----------JavaScript for Toggle Menu---------------->
-<script>
-	
-	var navLinks = document.getElementById("navlinks")
-	function showmenu(){
-		navlinks.style.right = "0";
 
-	}
-	function hidemenu(){
-		navlinks.style.right = "-300px";
-		
-	}
-</script>
-
-<script>
-	
-	var navbar =document.getElementById("navbar");
-    var menu = document.getElementById("menu");
-
-    window.onscroll = function(){
-    	if(window.pageYOffset >= menu.offsetTop){
-    		navbar.classList.add("sticky")
-    	}
-    	else {
-    		navbar.classList.remove("sticky")
-    	}
-    }
-</script>
 
 <script>
 // Open the Modal
@@ -608,7 +608,7 @@ nav .fa{
     .text-box h1{
 	font-size: 90px;
 	text-align: center;
-	margin-top: 122%;
+	margin-top: 128%;
 	color: #f44336;
 	}
 	.text-box p{
